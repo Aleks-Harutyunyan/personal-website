@@ -5,32 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleks Harutyunyan | Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Roboto Mono", monospace;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #222, #111);
+            color: #fff;
             text-align: center;
         }
         header {
-            background: linear-gradient(90deg, #333, #007BFF);
-            color: white;
-            padding: 30px;
-            font-size: 1.5em;
+            background: #111;
+            color: #fff;
+            padding: 50px 20px;
+            border-bottom: 2px solid #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 1000px;
+            position: relative;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+            margin-right: 20px;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            font-size: 3.5em;
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
         section {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #111;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
         }
-        .contact, .projects {
-            margin-top: 20px;
+        section:hover {
+            transform: scale(1.02);
+        }
+        h2 {
+            font-family: "Playfair Display", serif;
+            color: #fff;
+            text-transform: uppercase;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 6px;
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ccc;
         }
         a {
-            color: #007BFF;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -38,28 +89,48 @@
             text-decoration: underline;
         }
         .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background: #007BFF;
-            color: white;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 25px;
             border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+            margin-top: 20px;
         }
         .btn:hover {
-            background: #0056b3;
+            background-color: #222;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .social-links img {
+            width: 40px;
+            height: auto;
+            filter: invert(1); 
+            transition: transform 0.3s ease;
+        }
+        .social-links img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Aleks Harutyunyan</h1>
-        <p>Junior Web Developer | Problem Solver | Tech Enthusiast</p>
+        <div class="header-content">
+            <img src="https://imgur.com/nHUmWAJ.jpg" alt="Aleks Harutyunyan" class="profile-pic">
+            <h1>Aleks Harutyunyan</h1>
+        </div>
+        <p>Junior Web Developer | Minimal & Aesthetic</p>
     </header>
     <section>
         <h2>About Me</h2>
-        <p>Hi, I'm Aleks Harutyunyan, a junior web developer with experience in JavaScript, HTML/CSS, Node.js, React, and relational databases like PostgreSQL and MariaDB. I'm currently learning Java and basic Cobol. Passionate about coding and problem-solving.</p>
+        <p>Hi, I'm Aleks Harutyunyan, a junior web developer with experience in JavaScript, HTML/CSS, Node.js, React, and relational databases like PostgreSQL and MariaDB. I'm currently learning Java and basic Cobol. I specialize in crafting efficient, high-quality solutions with a disciplined mindset.</p>
     </section>
     <section class="projects">
         <h2>Projects</h2>
@@ -67,8 +138,14 @@
     </section>
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:harut7unyanalex@gmail.com">harut7unyanalex@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/alex-harutyunyan/" target="_blank">linkedin.com/in/alex-harutyunyan/</a></p>
+        <p class="social-links">
+            <a href="https://www.linkedin.com/in/alex-harutyunyan/" target="_blank">
+                <img src="https://image.similarpng.com/file/similarpng/very-thumbnail/2021/01/Black-linkedin-logo-design-on-transparent-background-PNG.png" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/Aleks-Harutyunyan" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
+            </a>
+        </p>
         <a href="mailto:harut7unyanalex@gmail.com" class="btn">Send an Email</a>
     </section>
 </body>
