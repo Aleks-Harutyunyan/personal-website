@@ -13,47 +13,69 @@
             text-align: center;
         }
         header {
-            background: #333;
+            background: linear-gradient(90deg, #333, #007BFF);
             color: white;
-            padding: 20px;
+            padding: 30px;
+            font-size: 1.5em;
         }
         section {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
         }
-        .contact {
+        .contact, .projects {
             margin-top: 20px;
         }
         a {
             color: #007BFF;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .btn:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
     <header>
-    <h1>Aleks Harutyunyan</h1>
+        <h1>Aleks Harutyunyan</h1>
         <p>Junior Web Developer | Problem Solver | Tech Enthusiast</p>
     </header>
     <section>
         <h2>About Me</h2>
         <p>Hi, I'm Aleks Harutyunyan, a junior web developer with experience in JavaScript, HTML/CSS, Node.js, React, and relational databases like PostgreSQL and MariaDB. I'm currently learning Java and basic Cobol. Passionate about coding and problem-solving.</p>
+        <a href="#contact" class="btn">Contact Me</a>
     </section>
-    <section>
+    <section class="projects">
         <h2>Projects</h2>
-        <p>Coming soon...</p>
+        <p>Check out some of my recent work:</p>
+        <ul>
+            <li><a href="#">Project 1 - Coming Soon</a></li>
+            <li><a href="#">Project 2 - Coming Soon</a></li>
+            <li><a href="#">Project 3 - Coming Soon</a></li>
+        </ul>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:your.email@example.com">harut7unyanalex@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/alex-harutyunyan/</a></p>
+        <a href="mailto:your.email@example.com" class="btn">Send an Email</a>
     </section>
 </body>
 </html>
