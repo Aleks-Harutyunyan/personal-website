@@ -11,7 +11,7 @@
             font-family: "Roboto Mono", monospace;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #222, #111);
+            background-color: #000;
             color: #fff;
             text-align: center;
         }
@@ -30,9 +30,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 80%;
+            width: 90%;
             max-width: 1000px;
+            flex-wrap: wrap;
             position: relative;
+            text-align: center;
         }
         .profile-pic {
             width: 150px;
@@ -42,17 +44,18 @@
             border: 3px solid #fff;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
             transition: transform 0.3s;
-            margin-right: 20px;
+            margin: 10px;
         }
         .profile-pic:hover {
             transform: scale(1.05);
         }
         h1 {
-            font-size: 3.5em;
+            font-size: 3em;
             font-family: "Playfair Display", serif;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 3px;
+            margin: 10px;
         }
         section {
             max-width: 850px;
@@ -107,16 +110,38 @@
         }
         .social-links a {
             display: inline-block;
-            margin: 0 15px;
+            margin: 10px;
         }
         .social-links img {
-            width: 40px;
+            width: 40px; /* Icon size */
             height: auto;
-            filter: invert(1); 
+            filter: invert(1); /* Makes the icon black and white */
             transition: transform 0.3s ease;
         }
         .social-links img:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            section {
+                width: 90%;
+                padding: 20px;
+            }
+            .social-links img {
+                width: 35px;
+            }
         }
     </style>
 </head>
